@@ -7,7 +7,7 @@ let page = undefined
 describe('Test', () => {
   beforeEach(async () => {
     const browser = await puppeteer.launch({
-      headless: false,
+      headless: true,
       dumpio: true,
       slowMo: 50,
       args: [`--disable-extensions-except=${EXTENSION_PATH}`, `--load-extension=${EXTENSION_PATH}`]
