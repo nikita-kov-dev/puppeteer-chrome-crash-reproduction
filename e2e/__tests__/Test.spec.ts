@@ -4,7 +4,7 @@ import puppeteer from "puppeteer";
 const EXTENSION_PATH = '../dist'
 let page = undefined
 
-describe('Import Folder Link', () => {
+describe('Test', () => {
   beforeEach(async () => {
     const browser = await puppeteer.launch({
       headless: false,
