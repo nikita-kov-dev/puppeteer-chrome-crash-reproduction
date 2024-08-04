@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Crush 'Em",
+    "description": "Crush 'Em",
+    "version": "0.0.1",
+    "chrome_url_overrides": {
+        "newtab": "index.html"
+    },
+    "permissions": ["storage"]
+}
