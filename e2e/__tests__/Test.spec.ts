@@ -3,10 +3,11 @@ import puppeteer from "puppeteer";
 
 const EXTENSION_PATH = '../dist'
 let page = undefined
+let browser = undefined
 
 describe('Test', () => {
   beforeEach(async () => {
-    const browser = await puppeteer.launch({
+    browser = await puppeteer.launch({
       headless: true,
       dumpio: true,
       slowMo: 50,
@@ -16,11 +17,12 @@ describe('Test', () => {
     const pages = await browser.pages()
     page = pages.at(0)
     await page.goto(`chrome://newtab`)
-  })
+  }, 15000)
 
   afterEach(async () => {
     page = undefined
-  })
+    await browser.close()
+  }, 15000)
 
   test('Test 0', async () => {
     // doesn't matter
