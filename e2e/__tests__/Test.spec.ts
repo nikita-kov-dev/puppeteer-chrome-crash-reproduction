@@ -11,7 +11,7 @@ describe('Test', () => {
       headless: true,
       dumpio: true,
       slowMo: 50,
-      args: [`--disable-extensions-except=${EXTENSION_PATH}`, `--load-extension=${EXTENSION_PATH}`]
+      args: [`--no-sandbox`, `--disable-extensions-except=${EXTENSION_PATH}`, `--load-extension=${EXTENSION_PATH}`]
     })
 
     const pages = await browser.pages()
